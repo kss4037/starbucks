@@ -8,23 +8,34 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class AdminDBMgrTest {
+import util.db.OracleDBUtil;
 
+class AdminDBMgrTest {
+	private AdminDBMgr testDBMgr;
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 	}
 
 	@BeforeEach
 	void setUp() throws Exception {
+		testDBMgr = new AdminDBMgr();
 	}
 
 	@AfterEach
 	void tearDown() throws Exception {
+		testDBMgr = null;
 	}
-
+	/**
+	 * Purpose: Constructor  of AdminDBMgr class.
+	 * Input: AdminDBMgr get util.db.OracleDBUtil.java's conn and assign it to AdminDBMgr's conn
+	 * Expected:
+	 * 		return PASS
+	 * 		util.db.OracleDBUtil.java's conn = AdminDBMgr's conn
+	 */
 	@Test
-	void testAdminDBMgr() {
-		assertEquals(0, 0);
+	void testConstructor() {
+		testDBMgr = new AdminDBMgr();
+		assertEquals(testDBMgr.conn, OracleDBUtil.getConn());
 	}
 
 	@Test
