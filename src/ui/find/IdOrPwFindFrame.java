@@ -59,8 +59,8 @@ public class IdOrPwFindFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public IdOrPwFindFrame() {	
-		setIconImage(Toolkit.getDefaultToolkit().getImage("images\\logo\\ë¡œê³ (50x50).jpg"));
-		setTitle("ì•„ì´ë”” / ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸° ì‹œìŠ¤í…œ");
+		setIconImage(Toolkit.getDefaultToolkit().getImage("images\\logo\\·Î°í(50x50).jpg"));
+		setTitle("¾ÆÀÌµğ / ºñ¹Ğ¹øÈ£ Ã£±â ½Ã½ºÅÛ");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 650, 457);
 		contentPane = new JPanel();
@@ -69,10 +69,10 @@ public class IdOrPwFindFrame extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel StarbucksLogoLabel = new LabelForeGround( new LabelFont(new LabelBound(new LabelIcon(new LabelHorizon(new JLabel("")),"images\\logo\\ë¡œê³ (150x150).png"), 17, 10, 600, 150),"êµ´ë¦¼",12,Font.PLAIN),0,0,0).getLabel();
+		JLabel StarbucksLogoLabel = new LabelForeGround( new LabelFont(new LabelBound(new LabelIcon(new LabelHorizon(new JLabel("")),"images\\logo\\·Î°í(150x150).png"), 17, 10, 600, 150),"±¼¸²",12,Font.PLAIN),0,0,0).getLabel();
 		contentPane.add(StarbucksLogoLabel);
 		
-		JLabel FrameTitleLabel = new LabelForeGround(new LabelFont(new LabelBound(new JLabel("ì•„ì´ë””/ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°"), 263,176,118,15),"êµ´ë¦¼",12,Font.PLAIN),0,0,0).getLabel();
+		JLabel FrameTitleLabel = new LabelForeGround(new LabelFont(new LabelBound(new JLabel("¾ÆÀÌµğ/ºñ¹Ğ¹øÈ£ Ã£±â"), 263,176,118,15),"±¼¸²",12,Font.PLAIN),0,0,0).getLabel();
 		contentPane.add(FrameTitleLabel);
 		
 		JSeparator separator = new JSeparator();
@@ -87,10 +87,10 @@ public class IdOrPwFindFrame extends JFrame {
 		separator_1.setBounds(391, 182, 231, 2);
 		contentPane.add(separator_1);
 		
-		JLabel FrameDescriptLabel = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("ì•„ì´ë””, ë¹„ë°€ë²ˆí˜¸ê°€ ìƒê°ë‚˜ì§€ ì•Šìœ¼ì„¸ìš”?"), 7,221,610,15),"êµ´ë¦¼",15,Font.PLAIN)).getLabel();
+		JLabel FrameDescriptLabel = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("¾ÆÀÌµğ, ºñ¹Ğ¹øÈ£°¡ »ı°¢³ªÁö ¾ÊÀ¸¼¼¿ä?"), 7,221,610,15),"±¼¸²",15,Font.PLAIN)).getLabel();
 		contentPane.add(FrameDescriptLabel);
 		
-		JLabel FrameDescriptLabel2 = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("ë³¸ì¸ ì¸ì¦ì„ í†µí•´ ìŠ¤íƒ€ë²…ìŠ¤  íšŒì› ì•„ì´ë””, ë¹„ë°€ë²ˆí˜¸ë¥¼ ì°¾ìœ¼ì‹¤ ìˆ˜ ìˆìŠµë‹ˆë‹¤."), 7,246,610,15),"êµ´ë¦¼",15,Font.BOLD)).getLabel();
+		JLabel FrameDescriptLabel2 = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("º»ÀÎ ÀÎÁõÀ» ÅëÇØ ½ºÅ¸¹÷½º  È¸¿ø ¾ÆÀÌµğ, ºñ¹Ğ¹øÈ£¸¦ Ã£À¸½Ç ¼ö ÀÖ½À´Ï´Ù."), 7,246,610,15),"±¼¸²",15,Font.BOLD)).getLabel();
 		contentPane.add(FrameDescriptLabel2);
 		
 		JPanel pnId = new JPanel();
@@ -100,13 +100,13 @@ public class IdOrPwFindFrame extends JFrame {
 		contentPane.add(pnId);
 		pnId.setLayout(null);
 		
-		JLabel FrameDescriptLabel3 = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("ì•„ì´ë”” / ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°"), 174, 10, 252,15),"êµ´ë¦¼",12,Font.BOLD)).getLabel();
+		JLabel FrameDescriptLabel3 = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("¾ÆÀÌµğ / ºñ¹Ğ¹øÈ£ Ã£±â"), 174, 10, 252,15),"±¼¸²",12,Font.BOLD)).getLabel();
 		pnId.add(FrameDescriptLabel3);
 		
-		JLabel FrameDescriptLabel4 = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("ì•„ë˜ ë²„íŠ¼ì„ ì„ íƒí•˜ì‹œë©´, ë³¸ì¸ì¸ì¦ì„ í†µí•´ ê³ ê°ë‹˜ì˜ ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ë¥¼ ì°¾ì•„ë“œë¦½ë‹ˆë‹¤."), 12, 35, 576,15),"êµ´ë¦¼",12,Font.PLAIN)).getLabel();
+		JLabel FrameDescriptLabel4 = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("¾Æ·¡ ¹öÆ°À» ¼±ÅÃÇÏ½Ã¸é, º»ÀÎÀÎÁõÀ» ÅëÇØ °í°´´ÔÀÇ ¾ÆÀÌµğ¿Í ºñ¹Ğ¹øÈ£¸¦ Ã£¾Æµå¸³´Ï´Ù."), 12, 35, 576,15),"±¼¸²",12,Font.PLAIN)).getLabel();
 		pnId.add(FrameDescriptLabel4);
 		
-		JButton btnFindId = new ButtonFont(new ButtonBound(new ButtonForeGround(new ButtonBackGround(new JButton("ì•„ì´ë”” / ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°"),0,102,51 ),255,255,255), 209,60,182,41),"êµ´ë¦¼",12,Font.PLAIN).getButton();
+		JButton btnFindId = new ButtonFont(new ButtonBound(new ButtonForeGround(new ButtonBackGround(new JButton("¾ÆÀÌµğ / ºñ¹Ğ¹øÈ£ Ã£±â"),0,102,51 ),255,255,255), 209,60,182,41),"±¼¸²",12,Font.PLAIN).getButton();
 		btnFindIdFunction(btnFindId);
 		pnId.add(btnFindId);
 	}

@@ -83,7 +83,7 @@ public class IdFindDialog extends JDialog {
 
 		mgr = new MemberDBMgr();
 
-		setTitle("ìŠ¤íƒ€ë²…ìŠ¤ ì•„ì´ë””/ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸° ì‹œìŠ¤í…œ");
+		setTitle("½ºÅ¸¹÷½º ¾ÆÀÌµğ/ºñ¹Ğ¹øÈ£ Ã£±â ½Ã½ºÅÛ");
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(null);
 
@@ -108,13 +108,13 @@ public class IdFindDialog extends JDialog {
 		pnCenter.add(pnPwFind, "pw");
 		pnPwFind.setLayout(null);
 
-		JLabel PurposeLabel = new LabelBackGround(new LabelForeGround(new LabelFont(new LabelBound(new JLabel("ìŠ¤íƒ€ë²…ìŠ¤ ë©¤ë²„ ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°"), 12, 10, 410, 15),"êµ´ë¦¼",12,Font.PLAIN),0,102,51),255,255,255).getLabel();
+		JLabel PurposeLabel = new LabelBackGround(new LabelForeGround(new LabelFont(new LabelBound(new JLabel("½ºÅ¸¹÷½º ¸â¹ö ºñ¹Ğ¹øÈ£ Ã£±â"), 12, 10, 410, 15),"±¼¸²",12,Font.PLAIN),0,102,51),255,255,255).getLabel();
 		pnPwFind.add(PurposeLabel);
 
-		JLabel DescriptLabel = new LabelFont(new LabelBound(new JLabel("ë³¸ì¸ì •ë³´ì— ë“±ë¡í•œ í•¸ë“œí°ë²ˆí˜¸ì™€ ì…ë ¥í•œ í•¸ë“œí°ë²ˆí˜¸ê°€ ê°™ì•„ì•¼"), 12, 35, 410, 15),"êµ´ë¦¼",12,Font.PLAIN).getLabel();
+		JLabel DescriptLabel = new LabelFont(new LabelBound(new JLabel("º»ÀÎÁ¤º¸¿¡ µî·ÏÇÑ ÇÚµåÆù¹øÈ£¿Í ÀÔ·ÂÇÑ ÇÚµåÆù¹øÈ£°¡ °°¾Æ¾ß"), 12, 35, 410, 15),"±¼¸²",12,Font.PLAIN).getLabel();
 		pnPwFind.add(DescriptLabel);
 
-		JLabel DescriptLabel2 = new LabelFont(new LabelBound(new JLabel("ë³¸ì¸ì •ë³´ì— ë“±ë¡í•œ í•¸ë“œí°ë²ˆí˜¸ì™€ ì…ë ¥í•œ í•¸ë“œí°ë²ˆí˜¸ê°€ ê°™ì•„ì•¼"), 12, 54, 410, 15),"êµ´ë¦¼",12,Font.PLAIN).getLabel();
+		JLabel DescriptLabel2 = new LabelFont(new LabelBound(new JLabel("º»ÀÎÁ¤º¸¿¡ µî·ÏÇÑ ÇÚµåÆù¹øÈ£¿Í ÀÔ·ÂÇÑ ÇÚµåÆù¹øÈ£°¡ °°¾Æ¾ß"), 12, 54, 410, 15),"±¼¸²",12,Font.PLAIN).getLabel();
 		pnPwFind.add(DescriptLabel2);
 
 		JSeparator separator_1 = new JSeparator();
@@ -122,15 +122,15 @@ public class IdFindDialog extends JDialog {
 		separator_1.setBounds(12, 79, 410, 2);
 		pnPwFind.add(separator_1);
 
-		JLabel lbId = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("ì•„ì´ë””"), 12, 104, 72, 15),"êµ´ë¦¼",12,Font.PLAIN)).getLabel();
+		JLabel lbId = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("¾ÆÀÌµğ"), 12, 104, 72, 15),"±¼¸²",12,Font.PLAIN)).getLabel();
 		pnPwFind.add(lbId);
 
-		JLabel lbPhone2 = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("í•¸ë“œí°ë²ˆí˜¸"), 12, 135, 72, 15),"êµ´ë¦¼",12,Font.PLAIN)).getLabel();
+		JLabel lbPhone2 = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("ÇÚµåÆù¹øÈ£"), 12, 135, 72, 15),"±¼¸²",12,Font.PLAIN)).getLabel();
 		pnPwFind.add(lbPhone2);
 
 		JComboBox comboPwPhone = new JComboBox();
 		comboPwPhone.setModel(new DefaultComboBoxModel(new String[] { "010", "011", "017", "018", "019", "070" }));
-		comboPwPhone.setFont(new Font("êµ´ë¦¼", Font.PLAIN, 12));
+		comboPwPhone.setFont(new Font("±¼¸²", Font.PLAIN, 12));
 		comboPwPhone.setBackground(Color.WHITE);
 		comboPwPhone.setBounds(96, 132, 52, 21);
 		pnPwFind.add(comboPwPhone);
@@ -146,7 +146,7 @@ public class IdFindDialog extends JDialog {
 				}
 			}
 		});
-		txtId.setFont(new Font("êµ´ë¦¼", Font.PLAIN, 12));
+		txtId.setFont(new Font("±¼¸²", Font.PLAIN, 12));
 		txtId.setColumns(10);
 		txtId.setBounds(96, 101, 198, 21);
 		pnPwFind.add(txtId);
@@ -166,9 +166,9 @@ public class IdFindDialog extends JDialog {
 			}
 
 		});
-		txtPwCode.setText("ì¸ì¦ë²ˆí˜¸ 6ìë¦¬ ì…ë ¥í•˜ê¸°");
+		txtPwCode.setText("ÀÎÁõ¹øÈ£ 6ÀÚ¸® ÀÔ·ÂÇÏ±â");
 		txtPwCode.setForeground(Color.LIGHT_GRAY);
-		txtPwCode.setFont(new Font("êµ´ë¦¼", Font.PLAIN, 12));
+		txtPwCode.setFont(new Font("±¼¸²", Font.PLAIN, 12));
 		txtPwCode.setColumns(10);
 		txtPwCode.setBounds(96, 163, 198, 21);
 		pnPwFind.add(txtPwCode);
@@ -178,11 +178,11 @@ public class IdFindDialog extends JDialog {
 		separator_2.setBounds(12, 196, 410, 2);
 		pnPwFind.add(separator_2);
 
-		JButton btnPwFind = new ButtonFont( new ButtonBound(new ButtonForeGround(new ButtonBackGround(new JButton("ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°"),0,102,51 ),255,255,255), 223,208,116,23),"êµ´ë¦¼",12,Font.PLAIN).getButton();
+		JButton btnPwFind = new ButtonFont( new ButtonBound(new ButtonForeGround(new ButtonBackGround(new JButton("ºñ¹Ğ¹øÈ£ Ã£±â"),0,102,51 ),255,255,255), 223,208,116,23),"±¼¸²",12,Font.PLAIN).getButton();
 		btnPwFindFunction(btnPwFind);
 		pnPwFind.add(btnPwFind);
 
-		JButton btnPwCancel = new ButtonFont( new ButtonBound(new ButtonForeGround(new ButtonBackGround(new JButton("ì·¨ì†Œ"),0,102,51 ),255,255,255), 351,208,71,23),"êµ´ë¦¼",12,Font.PLAIN).getButton();
+		JButton btnPwCancel = new ButtonFont( new ButtonBound(new ButtonForeGround(new ButtonBackGround(new JButton("Ãë¼Ò"),0,102,51 ),255,255,255), 351,208,71,23),"±¼¸²",12,Font.PLAIN).getButton();
 		btnPwCancelFunction(btnPwCancel);
 		pnPwFind.add(btnPwCancel);
 
@@ -198,7 +198,7 @@ public class IdFindDialog extends JDialog {
 
 			}
 		});
-		txtPwPhone2.setFont(new Font("êµ´ë¦¼", Font.PLAIN, 12));
+		txtPwPhone2.setFont(new Font("±¼¸²", Font.PLAIN, 12));
 		txtPwPhone2.setColumns(10);
 		txtPwPhone2.setBounds(178, 132, 52, 21);
 		pnPwFind.add(txtPwPhone2);
@@ -217,12 +217,12 @@ public class IdFindDialog extends JDialog {
 				}
 			}
 		});
-		txtPwPhone3.setFont(new Font("êµ´ë¦¼", Font.PLAIN, 12));
+		txtPwPhone3.setFont(new Font("±¼¸²", Font.PLAIN, 12));
 		txtPwPhone3.setColumns(10);
 		txtPwPhone3.setBounds(260, 132, 52, 21);
 		pnPwFind.add(txtPwPhone3);
 
-		JButton btnPwCode = new ButtonFont( new ButtonBound (new ButtonBackGround(new JButton("ì¸ì¦ë²ˆí˜¸"),255,255,255 ), 334,131,88,23),"êµ´ë¦¼",12,Font.PLAIN).getButton();
+		JButton btnPwCode = new ButtonFont( new ButtonBound (new ButtonBackGround(new JButton("ÀÎÁõ¹øÈ£"),255,255,255 ), 334,131,88,23),"±¼¸²",12,Font.PLAIN).getButton();
 		btnPwCodeFunction(btnPwCode);
 		pnPwFind.add(btnPwCode);
 	}
@@ -235,11 +235,11 @@ public class IdFindDialog extends JDialog {
 				String varCode = String.valueOf(n);
 
 				if (txtId.getText().isEmpty() && txtPwPhone2.getText().isEmpty() && txtPwPhone3.getText().isEmpty()) {
-					System.out.println("ë“±ë¡ë˜ì§€ ì•Šì€ ë²ˆí˜¸ì…ë‹ˆë‹¤.");
-					JOptionPane.showMessageDialog(null, "ë“±ë¡ë˜ì§€ ì•Šì€ ë²ˆí˜¸ì…ë‹ˆë‹¤.");
+					System.out.println("µî·ÏµÇÁö ¾ÊÀº ¹øÈ£ÀÔ´Ï´Ù.");
+					JOptionPane.showMessageDialog(null, "µî·ÏµÇÁö ¾ÊÀº ¹øÈ£ÀÔ´Ï´Ù.");
 				} else {
-					System.out.println("ì¸ì¦ë²ˆí˜¸ëŠ” '" + varCode + "' ì…ë‹ˆë‹¤.");
-					JOptionPane.showMessageDialog(null, "ì¸ì¦ë²ˆí˜¸ëŠ” '" + varCode + "' ì…ë‹ˆë‹¤.");
+					System.out.println("ÀÎÁõ¹øÈ£´Â '" + varCode + "' ÀÔ´Ï´Ù.");
+					JOptionPane.showMessageDialog(null, "ÀÎÁõ¹øÈ£´Â '" + varCode + "' ÀÔ´Ï´Ù.");
 				}
 			}
 		});
@@ -260,20 +260,20 @@ public class IdFindDialog extends JDialog {
 			public void actionPerformed(ActionEvent e) {
 				if (txtId != null || !txtId.getText().isEmpty() || !txtPwPhone2.getText().isEmpty()
 						|| !txtPwPhone3.getText().isEmpty()) {
-					// ì…ë ¥ ë°ì´í„° ì¶”ì¶œ
+					// ÀÔ·Â µ¥ÀÌÅÍ ÃßÃâ
 					String login = txtId.getText();
-					System.out.println("ì…ë ¥í•˜ì‹  ì´ë¦„ì€ " + login);
-					// DB ì—°ë™
+					System.out.println("ÀÔ·ÂÇÏ½Å ÀÌ¸§Àº " + login);
+					// DB ¿¬µ¿
 					// Member mb = new Member(name, phone);
 					Member b = mgr.getOneMemberFindPw(login);
 					if (b != null) {
-						JOptionPane.showMessageDialog(null, (login + "ë‹˜ì˜ ë¹„ë°€ë²ˆí˜¸ëŠ” " + b.getPw() + "ì…ë‹ˆë‹¤."));
+						JOptionPane.showMessageDialog(null, (login + "´ÔÀÇ ºñ¹Ğ¹øÈ£´Â " + b.getPw() + "ÀÔ´Ï´Ù."));
 					} else {
-						JOptionPane.showMessageDialog(null, login + "ë‹˜ì˜ ì•„ì´ë””ëŠ” ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
+						JOptionPane.showMessageDialog(null, login + "´ÔÀÇ ¾ÆÀÌµğ´Â Ã£À» ¼ö ¾ø½À´Ï´Ù.");
 					}
 					dispose();
 				} else {
-					JOptionPane.showMessageDialog(null, "ì •ë³´ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
+					JOptionPane.showMessageDialog(null, "Á¤º¸¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
 				}
 			}
 		});
@@ -285,10 +285,10 @@ public class IdFindDialog extends JDialog {
 		pnCenter.add(pnIdFind, "id");
 		pnIdFind.setLayout(null);
 
-		JLabel lbName = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("ì´ë¦„"), 12, 104, 72, 15),"êµ´ë¦¼",12,Font.PLAIN)).getLabel();
+		JLabel lbName = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("ÀÌ¸§"), 12, 104, 72, 15),"±¼¸²",12,Font.PLAIN)).getLabel();
 		pnIdFind.add(lbName);
 
-		JLabel lbPhone = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("í•¸ë“œí°ë²ˆí˜¸"), 12, 135, 72, 15),"êµ´ë¦¼",12,Font.PLAIN)).getLabel();
+		JLabel lbPhone = new LabelHorizon(new LabelFont(new LabelBound(new JLabel("ÇÚµåÆù¹øÈ£"), 12, 135, 72, 15),"±¼¸²",12,Font.PLAIN)).getLabel();
 		pnIdFind.add(lbPhone);
 
 		txtName = new JTextField();
@@ -302,14 +302,14 @@ public class IdFindDialog extends JDialog {
 				}
 			}
 		});
-		txtName.setFont(new Font("êµ´ë¦¼", Font.PLAIN, 12));
+		txtName.setFont(new Font("±¼¸²", Font.PLAIN, 12));
 		txtName.setBounds(96, 101, 198, 21);
 		pnIdFind.add(txtName);
 		txtName.setColumns(10);
 
 		JComboBox comboPhone = new JComboBox();
 		comboPhone.setBackground(new Color(255, 255, 255));
-		comboPhone.setFont(new Font("êµ´ë¦¼", Font.PLAIN, 12));
+		comboPhone.setFont(new Font("±¼¸²", Font.PLAIN, 12));
 		comboPhone.setModel(new DefaultComboBoxModel(new String[] { "010", "011", "017", "018", "019", "070" }));
 		comboPhone.setBounds(96, 132, 52, 21);
 		pnIdFind.add(comboPhone);
@@ -328,12 +328,12 @@ public class IdFindDialog extends JDialog {
 				}
 			}
 		});
-		txtPhone.setFont(new Font("êµ´ë¦¼", Font.PLAIN, 12));
+		txtPhone.setFont(new Font("±¼¸²", Font.PLAIN, 12));
 		txtPhone.setBounds(178, 132, 52, 21);
 		pnIdFind.add(txtPhone);
 		txtPhone.setColumns(10);
 
-		JButton btnCode = new ButtonFont( new ButtonBound (new ButtonBackGround(new JButton("ì¸ì¦ë²ˆí˜¸"),255,255,255 ), 334,131,88,23),"êµ´ë¦¼",12,Font.PLAIN).getButton();
+		JButton btnCode = new ButtonFont( new ButtonBound (new ButtonBackGround(new JButton("ÀÎÁõ¹øÈ£"),255,255,255 ), 334,131,88,23),"±¼¸²",12,Font.PLAIN).getButton();
 		btnCodeFunction(btnCode);
 		pnIdFind.add(btnCode);
 
@@ -342,7 +342,7 @@ public class IdFindDialog extends JDialog {
 		txtCode.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				if (txtCode.getText().equals("ì¸ì¦ë²ˆí˜¸ 6ìë¦¬ ì…ë ¥í•˜ê¸°")) {
+				if (txtCode.getText().equals("ÀÎÁõ¹øÈ£ 6ÀÚ¸® ÀÔ·ÂÇÏ±â")) {
 					txtCode.setText("");
 					txtCode.setForeground(Color.black);
 				} else {
@@ -353,7 +353,7 @@ public class IdFindDialog extends JDialog {
 			@Override
 			public void focusLost(FocusEvent e) {
 				if (txtCode.getText().equals("")) {
-					txtCode.setText("ì¸ì¦ë²ˆí˜¸ 6ìë¦¬ ì…ë ¥í•˜ê¸°");
+					txtCode.setText("ÀÎÁõ¹øÈ£ 6ÀÚ¸® ÀÔ·ÂÇÏ±â");
 					txtCode.setForeground(Color.LIGHT_GRAY);
 				} else {
 					txtCode.selectAll();
@@ -361,19 +361,19 @@ public class IdFindDialog extends JDialog {
 			}
 		});
 		txtCode.setForeground(Color.LIGHT_GRAY);
-		txtCode.setFont(new Font("êµ´ë¦¼", Font.PLAIN, 12));
-		txtCode.setText("ì¸ì¦ë²ˆí˜¸ 6ìë¦¬ ì…ë ¥í•˜ê¸°");
+		txtCode.setFont(new Font("±¼¸²", Font.PLAIN, 12));
+		txtCode.setText("ÀÎÁõ¹øÈ£ 6ÀÚ¸® ÀÔ·ÂÇÏ±â");
 		txtCode.setBounds(96, 163, 198, 21);
 		pnIdFind.add(txtCode);
 		txtCode.setColumns(10);
 
-		JLabel TitleIDfinderLabel = new LabelBackGround(new LabelForeGround(new LabelFont(new LabelBound(new JLabel("ìŠ¤íƒ€ë²…ìŠ¤ ë©¤ë²„ ì•„ì´ë”” ì°¾ê¸°"), 12, 10, 410, 15),"êµ´ë¦¼",12,Font.PLAIN),0,102,51),255,255,255).getLabel();
+		JLabel TitleIDfinderLabel = new LabelBackGround(new LabelForeGround(new LabelFont(new LabelBound(new JLabel("½ºÅ¸¹÷½º ¸â¹ö ¾ÆÀÌµğ Ã£±â"), 12, 10, 410, 15),"±¼¸²",12,Font.PLAIN),0,102,51),255,255,255).getLabel();
 		pnIdFind.add(TitleIDfinderLabel);
 
-		JLabel DescriptIDfinderLabel = new LabelFont(new LabelBound(new JLabel("ë³¸ì¸ì •ë³´ì— ë“±ë¡í•œ í•¸ë“œí°ë²ˆí˜¸ì™€ ì…ë ¥í•œ í•¸ë“œí°ë²ˆí˜¸ê°€ ê°™ì•„ì•¼"), 12, 35, 410, 15),"êµ´ë¦¼",12,Font.PLAIN).getLabel();
+		JLabel DescriptIDfinderLabel = new LabelFont(new LabelBound(new JLabel("º»ÀÎÁ¤º¸¿¡ µî·ÏÇÑ ÇÚµåÆù¹øÈ£¿Í ÀÔ·ÂÇÑ ÇÚµåÆù¹øÈ£°¡ °°¾Æ¾ß"), 12, 35, 410, 15),"±¼¸²",12,Font.PLAIN).getLabel();
 		pnIdFind.add(DescriptIDfinderLabel);
 
-		JLabel DescriptIDfinderLabel2 = new LabelFont(new LabelBound(new JLabel("ë³¸ì¸ì •ë³´ì— ë“±ë¡í•œ í•¸ë“œí°ë²ˆí˜¸ì™€ ì…ë ¥í•œ í•¸ë“œí°ë²ˆí˜¸ê°€ ê°™ì•„ì•¼"), 12, 54, 410, 15),"êµ´ë¦¼",12,Font.PLAIN).getLabel();
+		JLabel DescriptIDfinderLabel2 = new LabelFont(new LabelBound(new JLabel("º»ÀÎÁ¤º¸¿¡ µî·ÏÇÑ ÇÚµåÆù¹øÈ£¿Í ÀÔ·ÂÇÑ ÇÚµåÆù¹øÈ£°¡ °°¾Æ¾ß"), 12, 54, 410, 15),"±¼¸²",12,Font.PLAIN).getLabel();
 		pnIdFind.add(DescriptIDfinderLabel2);
 
 		JSeparator separator = new JSeparator();
@@ -381,10 +381,10 @@ public class IdFindDialog extends JDialog {
 		separator.setBounds(12, 79, 410, 2);
 		pnIdFind.add(separator);
 
-		JButton btnCancel = new ButtonFont( new ButtonBound (new ButtonForeGround(new ButtonBackGround(new JButton("ì·¨ì†Œ"),0,102,51 ),255, 255, 255), 351,208,71,23),"êµ´ë¦¼",12,Font.PLAIN).getButton();
+		JButton btnCancel = new ButtonFont( new ButtonBound (new ButtonForeGround(new ButtonBackGround(new JButton("Ãë¼Ò"),0,102,51 ),255, 255, 255), 351,208,71,23),"±¼¸²",12,Font.PLAIN).getButton();
 		pnIdFind.add(btnCancel);
 
-		JButton btnIdFind = new ButtonFont( new ButtonBound (new ButtonForeGround(new ButtonBackGround(new JButton("ì•„ì´ë”” ì°¾ê¸°"),0,102,51 ),255, 255, 255), 223, 208, 116, 23),"êµ´ë¦¼",12,Font.PLAIN).getButton();
+		JButton btnIdFind = new ButtonFont( new ButtonBound (new ButtonForeGround(new ButtonBackGround(new JButton("¾ÆÀÌµğ Ã£±â"),0,102,51 ),255, 255, 255), 223, 208, 116, 23),"±¼¸²",12,Font.PLAIN).getButton();
 		btnIdFindFunction(btnIdFind);
 		pnIdFind.add(btnIdFind);
 
@@ -404,7 +404,7 @@ public class IdFindDialog extends JDialog {
 				}
 			}
 		});
-		txtPhone2.setFont(new Font("êµ´ë¦¼", Font.PLAIN, 12));
+		txtPhone2.setFont(new Font("±¼¸²", Font.PLAIN, 12));
 		txtPhone2.setColumns(10);
 		txtPhone2.setBounds(260, 132, 52, 21);
 		pnIdFind.add(txtPhone2);
@@ -422,11 +422,11 @@ public class IdFindDialog extends JDialog {
 				String varCode = String.valueOf(n);
 
 				if (txtName.getText().isEmpty() && txtPhone.getText().isEmpty() && txtPhone2.getText().isEmpty()) {
-					System.out.println("ë“±ë¡ë˜ì§€ ì•Šì€ ë²ˆí˜¸ì…ë‹ˆë‹¤.");
-					JOptionPane.showMessageDialog(null, "ë“±ë¡ë˜ì§€ ì•Šì€ ë²ˆí˜¸ì…ë‹ˆë‹¤.");
+					System.out.println("µî·ÏµÇÁö ¾ÊÀº ¹øÈ£ÀÔ´Ï´Ù.");
+					JOptionPane.showMessageDialog(null, "µî·ÏµÇÁö ¾ÊÀº ¹øÈ£ÀÔ´Ï´Ù.");
 				} else {
-					System.out.println("ì¸ì¦ë²ˆí˜¸ëŠ” '" + varCode + "' ì…ë‹ˆë‹¤.");
-					JOptionPane.showMessageDialog(null, "ì¸ì¦ë²ˆí˜¸ëŠ” '" + varCode + "' ì…ë‹ˆë‹¤.");
+					System.out.println("ÀÎÁõ¹øÈ£´Â '" + varCode + "' ÀÔ´Ï´Ù.");
+					JOptionPane.showMessageDialog(null, "ÀÎÁõ¹øÈ£´Â '" + varCode + "' ÀÔ´Ï´Ù.");
 				}
 			}
 		});
@@ -437,21 +437,21 @@ public class IdFindDialog extends JDialog {
 			public void actionPerformed(ActionEvent e) {
 				if (txtName != null || !txtName.getText().isEmpty() || !txtPhone.getText().isEmpty()
 						|| !txtPhone2.getText().isEmpty()) {
-					System.out.println("íšŒì›ê°€ì… DB í†µì‹ ...");
-					// ì…ë ¥ ë°ì´í„° ì¶”ì¶œ
+					System.out.println("È¸¿ø°¡ÀÔ DB Åë½Å...");
+					// ÀÔ·Â µ¥ÀÌÅÍ ÃßÃâ
 					String name = txtName.getText();
-					System.out.println("ì…ë ¥í•˜ì‹  ì´ë¦„ì€ " + name);
-					// DB ì—°ë™
+					System.out.println("ÀÔ·ÂÇÏ½Å ÀÌ¸§Àº " + name);
+					// DB ¿¬µ¿
 					// Member mb = new Member(name, phone);
 					Member b = mgr.getOneMemberFindId(name);
 					if (b != null) {
-						JOptionPane.showMessageDialog(null, (name + "ë‹˜ì˜ ì•„ì´ë””ëŠ” " + b.getLogin() + "ì…ë‹ˆë‹¤."));
+						JOptionPane.showMessageDialog(null, (name + "´ÔÀÇ ¾ÆÀÌµğ´Â " + b.getLogin() + "ÀÔ´Ï´Ù."));
 					} else {
-						JOptionPane.showMessageDialog(null, name + "ë‹˜ì˜ ì•„ì´ë””ëŠ” ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
+						JOptionPane.showMessageDialog(null, name + "´ÔÀÇ ¾ÆÀÌµğ´Â Ã£À» ¼ö ¾ø½À´Ï´Ù.");
 					}
 					dispose();
 				} else {
-					JOptionPane.showMessageDialog(null, "ì •ë³´ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
+					JOptionPane.showMessageDialog(null, "Á¤º¸¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
 				}
 			}
 		});
@@ -474,11 +474,11 @@ public class IdFindDialog extends JDialog {
 		menuBar.setBounds(0, 0, 434, 25);
 		getContentPane().add(menuBar);
 
-		JButton btnFindId = new ButtonFont(new ButtonBackGround(new JButton("ì•„ì´ë”” ì°¾ê¸°"),255, 255, 255),"êµ´ë¦¼",12,Font.PLAIN).getButton();
+		JButton btnFindId = new ButtonFont(new ButtonBackGround(new JButton("¾ÆÀÌµğ Ã£±â"),255, 255, 255),"±¼¸²",12,Font.PLAIN).getButton();
 		btnFindIdFunction(btnFindId);
 		menuBar.add(btnFindId);
 
-		JButton btnFindPw = new ButtonFont(new ButtonBackGround(new JButton("ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°"),255, 255, 255),"êµ´ë¦¼",12,Font.PLAIN).getButton();
+		JButton btnFindPw = new ButtonFont(new ButtonBackGround(new JButton("ºñ¹Ğ¹øÈ£ Ã£±â"),255, 255, 255),"±¼¸²",12,Font.PLAIN).getButton();
 		btnFindPwFunction(btnFindPw);
 		menuBar.add(btnFindPw);
 	}

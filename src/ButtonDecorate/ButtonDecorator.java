@@ -8,7 +8,7 @@ public class ButtonDecorator extends ButtonComponent  {
 	protected JButton button = null;
 	protected String text;
 	public ButtonDecorator(JButton button) {
-		this.button = (ButtonComponent) button;
+		this.button = button;
 	}
 	public ButtonDecorator(String text) {
 		super(text);
