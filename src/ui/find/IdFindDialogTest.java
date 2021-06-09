@@ -126,5 +126,122 @@ class IdFindDialogTest {
 				"failure님의 아이디가  없음!\r\n" + 
 				"");
 	}
+	
+	/**
+	 * Purpose: Create btnPwFindFunction
+	 * Input: btnPwFindFunction get PW from MEMBER TABLE USING ID , PHONE
+	 * Expected:
+	 * 		GOT I Find your PW correspond your ID! MEssage
+	 */
+	@Test
+	void testbtnPwFindFunction_Success() throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchFieldException {
+		JButton btnPwFind = new JButton();
+		
+		Field field = testIdFindDialog.getClass().getDeclaredField("txtId");
+		field.setAccessible(true);
+		JTextField txtId = (JTextField)field.get(testIdFindDialog);
+		txtId.setText("sgg");
+		
+		field = testIdFindDialog.getClass().getDeclaredField("txtPwPhone2");
+		field.setAccessible(true);
+		JTextField txtPwPhone2 = (JTextField)field.get(testIdFindDialog);
+		txtPwPhone2.setText("5501");
+		
+		field = testIdFindDialog.getClass().getDeclaredField("txtPwPhone3");
+		field.setAccessible(true);
+		JTextField txtPwPhone3 = (JTextField)field.get(testIdFindDialog);
+		txtPwPhone3.setText("4037");
+		
+		Method method = testIdFindDialog.getClass().getDeclaredMethod("btnPwFindFunction",JButton.class);
+		method.setAccessible(true);
+		method.invoke(testIdFindDialog, btnPwFind);
+		
+		System.setOut(new PrintStream(outputStreamCaptor));
+		 btnPwFind.doClick();
+		assertEquals(outputStreamCaptor.toString(),"입력하신 이름은 sgg\r\n" + 
+				"sgg님의 비밀번호가  있음!\r\n" + 
+				"");
+	}
+	/**
+	 * Purpose: Create btnPwFindFunction
+	 * Input: btnPwFindFunction get PW from MEMBER TABLE USING ID , PHONE
+	 * Expected:
+	 * 		GOT I Couldnt Find your PW correspond your ID! MEssage then
+	 * 		GOT ENTER INPUT DATA PLEASE MEssage
+	 */
+	@Test
+	void testbtnPwFindFunction_fail() throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchFieldException {
+		JButton btnPwFind = new JButton();
+		
+		Field field = testIdFindDialog.getClass().getDeclaredField("txtId");
+		field.setAccessible(true);
+		JTextField txtId = (JTextField)field.get(testIdFindDialog);
+		txtId.setText("failure");
+		
+		field = testIdFindDialog.getClass().getDeclaredField("txtPwPhone2");
+		field.setAccessible(true);
+		JTextField txtPwPhone2 = (JTextField)field.get(testIdFindDialog);
+		txtPwPhone2.setText("5501");
+		
+		field = testIdFindDialog.getClass().getDeclaredField("txtPwPhone3");
+		field.setAccessible(true);
+		JTextField txtPwPhone3 = (JTextField)field.get(testIdFindDialog);
+		txtPwPhone3.setText("4037");
+		
+		Method method = testIdFindDialog.getClass().getDeclaredMethod("btnPwFindFunction",JButton.class);
+		method.setAccessible(true);
+		method.invoke(testIdFindDialog, btnPwFind);
+		
+		System.setOut(new PrintStream(outputStreamCaptor));
+		 btnPwFind.doClick();
+		assertEquals(outputStreamCaptor.toString(),"입력하신 이름은 failure\r\n" + 
+				"failure님의 비밀번호가  없음!\r\n" + 
+				"");
+		
+		txtId.setText(null);
+		outputStreamCaptor.reset();
+		System.setOut(new PrintStream(outputStreamCaptor));
+		 btnPwFind.doClick();
+		assertEquals(outputStreamCaptor.toString(),"입력하신 이름은 \r\n" + 
+				"아이디 찾기 입력이 오류\r\n" + 
+				"");
+	}
+	
+	/**
+	 * Purpose: Create btnCodeFunction
+	 * Input: btnCodeFunction SHOW Random number IF name and Phone is not EMPTY
+	 * Expected:
+	 * 		GOT Random generated Numbers
 
+	@Test
+	void testbtnCodeFunction_Success() throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchFieldException {
+		JButton btnCode = new JButton();
+		
+		Field field = testIdFindDialog.getClass().getDeclaredField("txtName");
+		field.setAccessible(true);
+		JTextField txtName = (JTextField)field.get(testIdFindDialog);
+		txtName.setText(null);
+		
+		field = testIdFindDialog.getClass().getDeclaredField("txtPhone");
+		field.setAccessible(true);
+		JTextField txtPhone = (JTextField)field.get(testIdFindDialog);
+		txtPhone.setText("5501");
+		
+		field = testIdFindDialog.getClass().getDeclaredField("txtPhone2");
+		field.setAccessible(true);
+		JTextField txtPhone2 = (JTextField)field.get(testIdFindDialog);
+		txtPhone2.setText("4037");
+		
+		Method method = testIdFindDialog.getClass().getDeclaredMethod("btnCodeFunction",JButton.class);
+		method.setAccessible(true);
+		method.invoke(testIdFindDialog,btnCode);
+		
+		System.setOut(new PrintStream(outputStreamCaptor));
+		btnCode.doClick();
+		assertEquals(outputStreamCaptor.toString(),"회원가입 DB 통신...\r\n" + 
+				"입력하신 이름은 failure\r\n" + 
+				"failure님의 아이디가  없음!\r\n" + 
+				"");
+	}
+		 */
 }
