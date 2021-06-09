@@ -30,6 +30,10 @@ class MainFrameTest {
 		method.setAccessible(true);
 		method.invoke(testMainFrame);
 		
+		method = testMainFrame.getClass().getDeclaredMethod("makeJPanel");
+		method.setAccessible(true);
+		JPanel panel = (JPanel) method.invoke(testMainFrame);
+		
 	}
 
 	@AfterEach
@@ -38,7 +42,7 @@ class MainFrameTest {
 	}
 	/**
 	 * Purpose: set JFrame's title , icon , defaultCloseOperation
-	 * Input: makeJPanel set Jframe's title , icon as Sturbucks related. set EXIT_ON_CLOSE operation
+	 * Input: makeJFrame set Jframe's title , icon as Sturbucks related. set EXIT_ON_CLOSE operation
 	 * Expected:
 	 * 		return PASS
 	 * 		Title = "스타벅스 음료 주문 프로그램"
@@ -71,6 +75,23 @@ class MainFrameTest {
 		
 		assertEquals(Color.white, testMainFrame.getContentPane().getBackground());
 		assertEquals("java.awt.GridLayout[hgap=0,vgap=0,rows=0,cols=2]",testMainFrame.getContentPane().getLayout().toString());
+	}
+	/**
+	 * Purpose: Create JPanel
+	 * Input: makeJPanel set JPanel's background white and Layout as null
+	 * Expected:
+	 * 		return PASS
+	 * 		Background = white
+	 * 		Layout = null
+	 */
+	@Test
+	void testmakeJPanel() throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+		Method method = testMainFrame.getClass().getDeclaredMethod("makeJPanel");
+		method.setAccessible(true);
+		JPanel testpanel = (JPanel) method.invoke(testMainFrame);
+		
+		assertEquals(Color.WHITE, testpanel.getBackground());
+		assertEquals(null, testpanel.getLayout());
 	}
 
 }
