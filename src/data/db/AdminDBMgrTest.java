@@ -113,5 +113,20 @@ class AdminDBMgrTest {
 	void testLoginProcess_LOGIN_NOT_FOUND() {
 		assertEquals(testDBMgr.loginProcess("abc", "1234"), MemberDBMgr.LOGIN_NOT_FOUND);
 	}
+	/**
+	 * Purpose: using LOGIN , PW to verify member at MEMBERS table
+	 * Input: LoginProcess Login Verify Member Null or Empty DATA at LOGIN or PW or conn
+	 * Expected:
+	 * 		return LOGIN_ERROR
+	 */
+	@Test
+	void testLoginProcess_LOGIN_ERROR() {
+		assertEquals(testDBMgr.loginProcess("", "1234"), MemberDBMgr.LOGIN_ERROR);
+		assertEquals(testDBMgr.loginProcess("sgg", ""), MemberDBMgr.LOGIN_ERROR);
+		assertEquals(testDBMgr.loginProcess(null, "1234"), MemberDBMgr.LOGIN_ERROR);
+		assertEquals(testDBMgr.loginProcess("sgg", null), MemberDBMgr.LOGIN_ERROR);
+		testDBMgr.conn = null;
+		assertEquals(testDBMgr.loginProcess("sgg", "1234"), MemberDBMgr.LOGIN_ERROR);
+	}
 
 }
