@@ -46,7 +46,7 @@ class MainFrameTest {
 	 * 		Frame's Close operation = JFrame.EXIT_ON_CLOSE
 	 */
 	@Test
-	void testmakeJPanel() throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+	void testmakeJFrame() throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		Method method = testMainFrame.getClass().getDeclaredMethod("setJframe");
 		method.setAccessible(true);
 		method.invoke(testMainFrame);
@@ -72,4 +72,5 @@ class MainFrameTest {
 		assertEquals(Color.white, testMainFrame.getContentPane().getBackground());
 		assertEquals("java.awt.GridLayout[hgap=0,vgap=0,rows=0,cols=2]",testMainFrame.getContentPane().getLayout().toString());
 	}
+
 }
