@@ -131,5 +131,36 @@ class MainFrameTest {
 		assertEquals(testMainFrame.lbLoginMessage.getForeground(),Color.black);
 		assertEquals(testMainFrame.Login,"sgg");
 	}
+	/**
+	 * Purpose: Create Login_Button FUNCTION
+	 * Input: btnLoginFunction get ID,PW form textFields then verify with MEMBERS TABLE
+	 * Expected:
+	 * @throws NoSuchFieldException 
+	 * 		GOT LOGIN NOT FOUND MESSAGE
+	 */
+	@Test
+	void testbtnLoginFunction_LOGIN_NOT_FOUND() throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchFieldException {
+		JButton btnLogin = new JButton();
+		
+		Field field = testMainFrame.getClass().getDeclaredField("txtLogin");
+		field.setAccessible(true);
+		JTextField loginfield = (JTextField)field.get(testMainFrame);
+		loginfield.setText("failure");
+		
+		field = testMainFrame.getClass().getDeclaredField("passwordField");
+		field.setAccessible(true);
+		JTextField passwordField = (JTextField)field.get(testMainFrame);
+		passwordField.setText("1234");
+		
+		
+		Method method = testMainFrame.getClass().getDeclaredMethod("btnLoginFunction",JButton.class);
+		method.setAccessible(true);
+		method.invoke(testMainFrame,btnLogin);
+		
+		btnLogin.doClick();
+		
+		assertEquals(testMainFrame.lbLoginMessage.getText(),"회원의 정보를 찾을 수 없습니다.");
+		assertEquals(testMainFrame.lbLoginMessage.getForeground(),Color.red);
+	}
 
 }
