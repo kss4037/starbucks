@@ -56,6 +56,18 @@ class AdminDBMgrTest {
 		assertEquals(testAdmin.getLogin(),"sgg");
 	}
 	/**
+	 * Purpose: Request Non exist data of Table Admin
+	 * Input: getAdminByLogin return correspond Admin data using sql Query Login="failure"
+	 * Expected:
+	 * 		return PASS
+	 * 		return Data will be null
+	 */
+	@Test
+	void testGetAdminByLogin_WrongLogin() {
+		Admin testAdmin = testDBMgr.getAdminByLogin("failure");
+		assertEquals(testAdmin , null);
+	}
+	/**
 	 * Purpose: 
 	 * Input: 
 	 * Expected:
