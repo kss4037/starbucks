@@ -102,5 +102,16 @@ class AdminDBMgrTest {
 	void testLoginProcess_PW_MISMATCH() {
 		assertEquals(testDBMgr.loginProcess("sgg", "4321"), MemberDBMgr.LOGIN_PW_MISMATCH);
 	}
+	/**
+	 * Purpose: using LOGIN , PW to verify member at MEMBERS table
+	 * Input: LoginProcess Login Verify Member ID="abc" , PW = "1234"
+	 * Expected:
+	 * 		return LOGIN_NOT_FOUND
+	 * 
+	 */
+	@Test
+	void testLoginProcess_LOGIN_NOT_FOUND() {
+		assertEquals(testDBMgr.loginProcess("abc", "1234"), MemberDBMgr.LOGIN_NOT_FOUND);
+	}
 
 }
