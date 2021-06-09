@@ -2,9 +2,6 @@ package data.db;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.io.ByteArrayOutputStream;
-import java.io.OutputStream;
-import java.io.PrintStream;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -72,8 +69,8 @@ class AdminDBMgrTest {
 		assertEquals(testAdmin , null);
 	}
 	/**
-	 * Purpose: excute GetAdminByLogin when connection is invaild
-	 * Input: getAdminByLogin return correspond Admin data using sql Query Login="failure"
+	 * Purpose: excute GetAdminByLogin when connection is null
+	 * Input: getAdminByLogin return correspond Admin data using sql Query Login="sgg"
 	 * Expected:
 	 * 		return PASS
 	 * 		return Data will be null
@@ -85,15 +82,16 @@ class AdminDBMgrTest {
 		assertEquals(testAdmin , null);
 	}
 	/**
-	 * Purpose: 
-	 * Input: 
+	 * Purpose: using LOGIN , PW to verify member at MEMBERS table
+	 * Input: LoginProcess Login Verify Member ID="sgg" , PW = "1234"
 	 * Expected:
 	 * 		return PASS
+	 * 		return LOGIN_SUCESS MESSAGE
 	 * 
 	 */
 	@Test
-	void testLoginProcess() {
-		assertEquals(0, 0);
+	void testLoginProcess_LOGIN_SUCESS() {
+		assertEquals(testDBMgr.loginProcess("sgg", "1234"), MemberDBMgr.LOGIN_SUCCESS);
 	}
 
 }
