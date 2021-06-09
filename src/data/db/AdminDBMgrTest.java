@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import data.Admin;
 import util.db.OracleDBUtil;
 
 class AdminDBMgrTest {
@@ -37,12 +38,30 @@ class AdminDBMgrTest {
 		testDBMgr = new AdminDBMgr();
 		assertEquals(testDBMgr.conn, OracleDBUtil.getConn());
 	}
-
+	/**
+	 * Purpose: get Admin data from ADMINS Table Using LOGIN COLUMN DATA
+	 * Input: getAdminByLogin return correspond Admin data using sql Query Login="sgg"
+	 * Expected:
+	 * 		return PASS
+	 * 		Name = "adm"
+	 * 		Pw = "1234"
+	 * 		Login = "sgg"
+	 * 		
+	 */
 	@Test
-	void testGetAdminByLogin() {
-		assertEquals(0, 0);
+	void testGetAdminByLoginSucess() {
+		Admin testAdmin = testDBMgr.getAdminByLogin("sgg");
+		assertEquals(testAdmin.getName(),"adm");
+		assertEquals(testAdmin.getPw(),"1234");
+		assertEquals(testAdmin.getLogin(),"sgg");
 	}
-
+	/**
+	 * Purpose: 
+	 * Input: 
+	 * Expected:
+	 * 		return PASS
+	 * 
+	 */
 	@Test
 	void testLoginProcess() {
 		assertEquals(0, 0);
