@@ -60,7 +60,6 @@ class AdminDBMgrTest {
 	 * Purpose: Request Non exist data of Table Admin
 	 * Input: getAdminByLogin return correspond Admin data using sql Query Login="failure"
 	 * Expected:
-	 * 		return PASS
 	 * 		return Data will be null
 	 */
 	@Test
@@ -72,7 +71,6 @@ class AdminDBMgrTest {
 	 * Purpose: excute GetAdminByLogin when connection is null
 	 * Input: getAdminByLogin return correspond Admin data using sql Query Login="sgg"
 	 * Expected:
-	 * 		return PASS
 	 * 		return Data will be null
 	 */
 	@Test
@@ -92,6 +90,17 @@ class AdminDBMgrTest {
 	@Test
 	void testLoginProcess_LOGIN_SUCESS() {
 		assertEquals(testDBMgr.loginProcess("sgg", "1234"), MemberDBMgr.LOGIN_SUCCESS);
+	}
+	/**
+	 * Purpose: using LOGIN , PW to verify member at MEMBERS table
+	 * Input: LoginProcess Login Verify Member ID="sgg" , PW = "4321"
+	 * Expected:
+	 * 		return LOGIN_PW_MISMATCH
+	 * 
+	 */
+	@Test
+	void testLoginProcess_PW_MISMATCH() {
+		assertEquals(testDBMgr.loginProcess("sgg", "4321"), MemberDBMgr.LOGIN_PW_MISMATCH);
 	}
 
 }
