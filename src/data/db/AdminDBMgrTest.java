@@ -2,6 +2,10 @@ package data.db;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.io.ByteArrayOutputStream;
+import java.io.OutputStream;
+import java.io.PrintStream;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -65,6 +69,19 @@ class AdminDBMgrTest {
 	@Test
 	void testGetAdminByLogin_WrongLogin() {
 		Admin testAdmin = testDBMgr.getAdminByLogin("failure");
+		assertEquals(testAdmin , null);
+	}
+	/**
+	 * Purpose: excute GetAdminByLogin when connection is invaild
+	 * Input: getAdminByLogin return correspond Admin data using sql Query Login="failure"
+	 * Expected:
+	 * 		return PASS
+	 * 		return Data will be null
+	 */
+	@Test
+	void testGetAdminByLogin_NullConn() {
+		testDBMgr.conn = null;
+		Admin testAdmin = testDBMgr.getAdminByLogin("sgg");
 		assertEquals(testAdmin , null);
 	}
 	/**
