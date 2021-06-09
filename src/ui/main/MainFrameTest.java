@@ -3,13 +3,17 @@ package ui.main;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -19,6 +23,7 @@ import data.db.AdminDBMgr;
 
 class MainFrameTest {
 	private MainFrame testMainFrame;
+	private JPanel panel;
 	@BeforeEach
 	void setUp() throws Exception {
 		testMainFrame = new MainFrame();
@@ -32,13 +37,14 @@ class MainFrameTest {
 		
 		method = testMainFrame.getClass().getDeclaredMethod("makeJPanel");
 		method.setAccessible(true);
-		JPanel panel = (JPanel) method.invoke(testMainFrame);
+		panel = (JPanel) method.invoke(testMainFrame);
 		
 	}
 
 	@AfterEach
 	void tearDown() throws Exception {
 		testMainFrame = null;
+		panel = null;
 	}
 	/**
 	 * Purpose: set JFrame's title , icon , defaultCloseOperation
@@ -92,6 +98,38 @@ class MainFrameTest {
 		
 		assertEquals(Color.WHITE, testpanel.getBackground());
 		assertEquals(null, testpanel.getLayout());
+	}
+	/**
+	 * Purpose: Create Login_Button FUNCTION
+	 * Input: btnLoginFunction get ID,PW form textFields then verify with MEMBERS TABLE
+	 * Expected:
+	 * @throws NoSuchFieldException 
+	 * 		GOT LOGIN SUCEES MESSAGE
+	 */
+	@Test
+	void testbtnLoginFunction_LOGIN_SUCCESS() throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchFieldException {
+		JButton btnLogin = new JButton();
+		
+		Field field = testMainFrame.getClass().getDeclaredField("txtLogin");
+		field.setAccessible(true);
+		JTextField loginfield = (JTextField)field.get(testMainFrame);
+		loginfield.setText("sgg");
+		
+		field = testMainFrame.getClass().getDeclaredField("passwordField");
+		field.setAccessible(true);
+		JTextField passwordField = (JTextField)field.get(testMainFrame);
+		passwordField.setText("1234");
+		
+		
+		Method method = testMainFrame.getClass().getDeclaredMethod("btnLoginFunction",JButton.class);
+		method.setAccessible(true);
+		method.invoke(testMainFrame,btnLogin);
+		
+		btnLogin.doClick();
+		
+		assertEquals(testMainFrame.lbLoginMessage.getText(),"로그인에 성공하셨습니다.");
+		assertEquals(testMainFrame.lbLoginMessage.getForeground(),Color.black);
+		assertEquals(testMainFrame.Login,"sgg");
 	}
 
 }
