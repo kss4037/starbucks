@@ -176,7 +176,38 @@ class MainFrameTest {
 		Field field = testMainFrame.getClass().getDeclaredField("txtLogin");
 		field.setAccessible(true);
 		JTextField loginfield = (JTextField)field.get(testMainFrame);
-		loginfield.setText("failure");
+		loginfield.setText("sgg");
+		
+		field = testMainFrame.getClass().getDeclaredField("passwordField");
+		field.setAccessible(true);
+		JTextField passwordField = (JTextField)field.get(testMainFrame);
+		passwordField.setText("failure");
+		
+		
+		Method method = testMainFrame.getClass().getDeclaredMethod("btnLoginFunction",JButton.class);
+		method.setAccessible(true);
+		method.invoke(testMainFrame,btnLogin);
+		
+		btnLogin.doClick();
+		
+		assertEquals(testMainFrame.lbLoginMessage.getText(),"로그인 혹은 비밀번호가 틀리셨습니다.");
+		assertEquals(testMainFrame.lbLoginMessage.getForeground(),Color.red);
+	}
+	/**
+	 * Purpose: Create Login_Button FUNCTION
+	 * Input: btnLoginFunction get ID,PW form textFields then verify with MEMBERS TABLE
+	 * Expected:
+	 * @throws NoSuchFieldException 
+	 * 		GOT Not available service MESSAGE
+	 */
+	@Test
+	void testbtnLoginFunction_LOGIN_ERROR() throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchFieldException {
+		JButton btnLogin = new JButton();
+		
+		Field field = testMainFrame.getClass().getDeclaredField("txtLogin");
+		field.setAccessible(true);
+		JTextField loginfield = (JTextField)field.get(testMainFrame);
+		loginfield.setText(null);
 		
 		field = testMainFrame.getClass().getDeclaredField("passwordField");
 		field.setAccessible(true);
@@ -190,7 +221,7 @@ class MainFrameTest {
 		
 		btnLogin.doClick();
 		
-		assertEquals(testMainFrame.lbLoginMessage.getText(),"로그인 혹은 비밀번호가 틀리셨습니다.");
+		assertEquals(testMainFrame.lbLoginMessage.getText(),"지원하지 않는 서비스입니다.");
 		assertEquals(testMainFrame.lbLoginMessage.getForeground(),Color.red);
 	}
 
